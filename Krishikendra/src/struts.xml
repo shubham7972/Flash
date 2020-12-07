@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="default" extends="struts-default" namespace="/">  
+
+<!--   @@@@@@@@@@  sale page    @@@@@@@@@@  -->
+
+<action name="index">  
+<result name="success">WEB-INF/index.jsp</result>
+</action>
+
+
+
+
+<action name="sale">  
+<result name="success">WEB-INF/sale.jsp</result>
+</action>
+
+<action name="saleInsert" class="sale.InsertSale"> 
+<result name="input">WEB-INF/sale.jsp</result>
+<result name="success" type="redirect">sale</result>
+<result name="error">WEB-INF/sale.jsp</result>
+</action> 
+
+<action name="saleUpdate" class="sale.UpdateSale"> 
+<result name="input">WEB-INF/sale.jsp</result>
+<result name="success" type="redirect">sale</result>
+<result name="error">WEB-INF/sale.jsp</result>
+</action>
+
+<action name="saleDelete" class="sale.DeleteSale"> 
+<result name="input">WEB-INF/sale.jsp</result>
+<result name="success" type="redirect">sale</result>
+<result name="error">WEB-INF/sale.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@ sala page End    @@@@@@@@@@  -->
+
+
+
+
+
+<!--   @@@@@@@@@@  stock page   @@@@@@@@@@  -->
+
+
+<action name="stock">  
+<result name="success">WEB-INF/stock.jsp</result>
+</action>
+
+<action name="stockInsert" class="stockreport.InsertStockReport"> 
+<result name="input">WEB-INF/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/stock.jsp</result>
+</action> 
+
+<action name="stockUpdate" class="stockreport.UpdateStockReport"> 
+<result name="input">WEB-INF/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/stock.jsp</result>
+</action>
+
+<action name="stockDelete" class="stockreport.DeleteStockReport"> 
+<result name="input">WEB-INF/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/stock.jsp</result>
+</action>
+
+
+<!--   @@@@@@@@@@   stock page End   @@@@@@@@@@  -->
+
+
+
+
+<!--   @@@@@@@@@@  expense page    @@@@@@@@@@  -->
+
+<action name="expense">  
+<result name="success">WEB-INF/expense.jsp</result>
+</action>
+
+<action name="expenseInsert" class="expense.InsertExpense"> 
+<result name="input">WEB-INF/expense.jsp</result>
+<result name="success" type="redirect">expense</result>
+<result name="error">WEB-INF/expense.jsp</result>
+</action> 
+
+<action name="expenseUpdate" class="expense.UpdateExpense"> 
+<result name="input">WEB-INF/expense.jsp</result>
+<result name="success" type="redirect">expense</result>
+<result name="error">WEB-INF/expense.jsp</result>
+</action>
+
+<action name="expenseDelete" class="expense.DeleteExpense"> 
+<result name="input">WEB-INF/expense.jsp</result>
+<result name="success" type="redirect">expense</result>
+<result name="error">WEB-INF/expense.jsp</result>
+</action>
+
+
+
+<action name="expensereport">  
+<result name="success">WEB-INF/expensereport.jsp</result>
+</action>
+
+<action name="expenseRepInsert" class="expensereport.InsertExpenseReport"> 
+<result name="input">WEB-INF/expensereport.jsp</result>
+<result name="success" type="redirect">expensereport</result>
+<result name="error">WEB-INF/expensereport.jsp</result>
+</action> 
+
+<action name="expenseRepUpdate" class="expensereport.UpdateExpenseReport"> 
+<result name="input">WEB-INF/expensereport.jsp</result>
+<result name="success" type="redirect">expensereport</result>
+<result name="error">WEB-INF/expensereport.jsp</result>
+</action>
+
+<action name="expenseRepDelete" class="expensereport.DeleteExpenseReport"> 
+<result name="input">WEB-INF/expensereport.jsp</result>
+<result name="success" type="redirect">expensereport</result>
+<result name="error">WEB-INF/expensereport.jsp</result>
+</action>
+
+
+<!--   @@@@@@@@@@  Expense page End    @@@@@@@@@@  -->
+
+
+<!--   @@@@@@@@@@   Emp Details page     @@@@@@@@@@  -->
+
+
+<action name="empdetails">  
+<result name="success">WEB-INF/empdetails.jsp</result>
+</action>
+
+<action name="empInsert" class="empdetails.empInsert"> 
+<result name="input">WEB-INF/empdetails.jsp</result>
+<result name="success" type="redirect">empdetails</result>
+<result name="error">WEB-INF/empdetails.jsp</result>
+</action> 
+
+<action name="empUpdate" class="empdetails.empUpdate"> 
+<result name="input">WEB-INF/empdetails.jsp</result>
+<result name="success" type="redirect">empdetails</result>
+<result name="error">WEB-INF/empdetails.jsp</result>
+</action>
+
+<action name="empDelete" class="empdetails.empDelete"> 
+<result name="input">WEB-INF/empdetails.jsp</result>
+<result name="success" type="redirect">empdetails</result>
+<result name="error">WEB-INF/empdetails.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@  Emp Details page End    @@@@@@@@@@  -->
+
+
+<!--   @@@@@@@@@@  registration1 page    @@@@@@@@@@  -->
+
+
+<action name="registration">  
+<result name="success">WEB-INF/registration.jsp</result>
+</action>
+
+<action name="registrationInsert" class="registration.InsertRegister"> 
+<result name="input">WEB-INF/registration.jsp</result>
+<result name="success" type="redirect">registration</result>
+<result name="error">WEB-INF/registration.jsp</result>
+</action> 
+
+<action name="registrationUpdate" class="registration.UpdateRegister"> 
+<result name="input">WEB-INF/registration.jsp</result>
+<result name="success" type="redirect">registration</result>
+<result name="error">WEB-INF/registration.jsp</result>
+</action>
+
+<action name="registrationDelete" class="registration.DeleteRegister"> 
+<result name="input">WEB-INF/registration.jsp</result>
+<result name="success" type="redirect">registration</result>
+<result name="error">WEB-INF/registration.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@  registration1 page End   @@@@@@@@@@  -->
+
+
+
+<!-- 
+<action name="unit">  
+<result name="success">WEB-INF/unit.jsp</result>
+</action>
+
+<action name="unitInsert" class="unit.InsertUnit"> 
+<result name="input">WEB-INF/unit.jsp</result>
+<result name="success" type="redirect">unit</result>
+<result name="error">WEB-INF/unit.jsp</result>
+</action> 
+
+<action name="unitUpdate" class="unit.UpdateUnit"> 
+<result name="input">WEB-INF/unit.jsp</result>
+<result name="success" type="redirect">unit</result>
+<result name="error">WEB-INF/unit.jsp</result>
+</action>
+
+<action name="unitDelete" class="unit.DeleteUnit"> 
+<result name="input">WEB-INF/unit.jsp</result>
+<result name="success" type="redirect">unit</result>
+<result name="error">WEB-INF/unit.jsp</result>
+</action>
+
+-->
+
+
+<action name="taxmaster">  
+<result name="success">WEB-INF/taxmaster.jsp</result>
+</action>
+
+
+<action name="taxmasterInsert" class="taxmaster.InsertTaxmaster"> 
+<result name="input">WEB-INF/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/taxmaster.jsp</result>
+</action> 
+
+<action name="taxmasterUpdate" class="taxmaster.UpdateTaxmaster"> 
+<result name="input">WEB-INF/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/taxmaster.jsp</result>
+</action>
+
+<action name="taxmasterDelete" class="taxmaster.DeleteTaxmaster"> 
+<result name="input">WEB-INF/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/taxmaster.jsp</result>
+</action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   @@@@@@@@@@  Master Pages    @@@@@@@@@@  -->
+
+<!--
+<action name="sale">  
+<result name="success">WEB-INF/sale.jsp</result>
+</action> 
+
+<action name="sale" class="salereport.InsertSaleReport"> 
+<result name="input">WEB-INF/salereport/sale.jsp</result>
+<result name="success" type="redirect">sale</result>
+<result name="error">WEB-INF/salereport/sale.jsp</result>
+</action> 
+
+<action name="sale" class="master.UpdateSchemeMaster"> 
+<result name="input">WEB-INF/master/scheme.jsp</result>
+<result name="success" type="redirect">SchemeMaster</result>
+<result name="error">WEB-INF/master/scheme.jsp</result>
+</action>
+
+<action name="SchemeMasterDelete" class="master.DeleteSchemeMaster"> 
+<result name="input">WEB-INF/master/scheme.jsp</result>
+<result name="success" type="redirect">SchemeMaster</result>
+<result name="error">WEB-INF/master/scheme.jsp</result>
+</action>
+-->
+
+
+
+
+<!--   @@@@@@@@@@  empattendance Pages    @@@@@@@@@@  -->
+
+
+<action name="empattendance">  
+<result name="success">WEB-INF/empattendance.jsp</result>
+</action>
+
+<action name="empatdInsert" class="empatd.empatdInsert"> 
+<result name="input">WEB-INF/empattendance.jsp</result>
+<result name="success" type="redirect">empattendance</result>
+<result name="error">WEB-INF/empattendance.jsp</result>
+</action> 
+
+<action name="empatdUpdate" class="empatd.empatdUpdate"> 
+<result name="input">WEB-INF/empattendance.jsp</result>
+<result name="success" type="redirect">empattendance</result>
+<result name="error">WEB-INF/empattendance.jsp</result>
+</action>
+
+<action name="empatdDelete" class="empatd.empatdDelete"> 
+<result name="input">WEB-INF/empattendance.jsp</result>
+<result name="success" type="redirect">empattendance</result>
+<result name="error">WEB-INF/empattendance.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@  empattendance Pages    @@@@@@@@@@  -->
+
+
+
+
+
+<!--   @@@@@@@@@@ salereport  Pages    @@@@@@@@@@  -->
+
+
+<action name="salereport">  
+<result name="success">WEB-INF/salereport.jsp</result>
+</action>
+
+<action name="saleInsert" class="salereport.InsertSaleReport"> 
+<result name="input">WEB-INF/salereport.jsp</result>
+<result name="success" type="redirect">salereport</result>
+<result name="error">WEB-INF/salereport.jsp</result>
+</action> 
+
+<action name="saleUpdate" class="salereport.UpdateSaleReport"> 
+<result name="input">WEB-INF/salereport.jsp</result>
+<result name="success" type="redirect">salereport</result>
+<result name="error">WEB-INF/salereport.jsp</result>
+</action>
+
+<action name="saleDelete" class="salereport.DeleteSaleReport"> 
+<result name="input">WEB-INF/salereport.jsp</result>
+<result name="success" type="redirect">salereport</result>
+<result name="error">WEB-INF/salereport.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@ salereport  Pages End    @@@@@@@@@@  -->
+
+
+<!--   @@@@@@@@@@ productsreport  Pages    @@@@@@@@@@  -->
+
+
+<action name="productsreport">  
+<result name="success">WEB-INF/productsreport.jsp</result>
+</action>
+
+<action name="productsreportInsert" class="productsreport.InsertProductsReport"> 
+<result name="input">WEB-INF/productsreport.jsp</result>
+<result name="success" type="redirect">productsreport</result>
+<result name="error">WEB-INF/productsreport.jsp</result>
+</action> 
+
+<action name="productsreportUpdate" class="productsreport.UpdateProductsReport"> 
+<result name="input">WEB-INF/productsreport.jsp</result>
+<result name="success" type="redirect">productsreport</result>
+<result name="error">WEB-INF/productsreport.jsp</result>
+</action>
+
+<action name="productsreportDelete" class="productsreport.DeleteProductsReport"> 
+<result name="input">WEB-INF/productsreport.jsp</result>
+<result name="success" type="redirect">productsreport</result>
+<result name="error">WEB-INF/productsreport.jsp</result>
+</action>
+
+
+
+
+<action name="empreport">  
+<result name="success">WEB-INF/empreport.jsp</result>
+</action>
+
+<action name="empRepInsert" class="empreport.InsertEmpreport"> 
+<result name="input">WEB-INF/empreport.jsp</result>
+<result name="success" type="redirect">empreport</result>
+<result name="error">WEB-INF/empreport.jsp</result>
+</action> 
+
+<action name="empRepUpdate" class="empreport.UpdateEmpreport"> 
+<result name="input">WEB-INF/empreport.jsp</result>
+<result name="success" type="redirect">empreport</result>
+<result name="error">WEB-INF/empreport.jsp</result>
+</action>
+
+<action name="empRepDelete" class="empreport.DeleteEmpreport"> 
+<result name="input">WEB-INF/empreport.jsp</result>
+<result name="success" type="redirect">empreport</result>
+<result name="error">WEB-INF/empreport.jsp</result>
+</action>
+
+
+
+
+
+
+
+
+<action name="empatdreport">  
+<result name="success">WEB-INF/empatdreport.jsp</result>
+</action>
+
+<action name="empAtdRepInsert" class="empatdreport.InsertEmpatdreport"> 
+<result name="input">WEB-INF/empatdreport.jsp</result>
+<result name="success" type="redirect">empatdreport</result>
+<result name="error">WEB-INF/empatdreport.jsp</result>
+</action> 
+
+<action name="empAtdRepUpdate" class="empatdreport.UpdateEmpatdreport"> 
+<result name="input">WEB-INF/empatdreport.jsp</result>
+<result name="success" type="redirect">empatdreport</result>
+<result name="error">WEB-INF/empatdreport.jsp</result>
+</action>
+
+<action name="empAtdRepDelete" class="empatdreport.DeleteEmpatdreport"> 
+<result name="input">WEB-INF/empatdreport.jsp</result>
+<result name="success" type="redirect">empatdreport</result>
+<result name="error">WEB-INF/empatdreport.jsp</result>
+</action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   @@@@@@@@@@ productsreport  Pages End   @@@@@@@@@@  -->
+</package>
+
+<!-- <constant name="struts.action.excludePattern" value="/SchemeServlet"></constant> -->  <!-- you can initialize servlet here -->
+
+</struts>

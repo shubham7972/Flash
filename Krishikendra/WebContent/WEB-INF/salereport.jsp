@@ -21,21 +21,11 @@
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  
 
-  <script type="text/javascript">
-  https://code.jquery.com/jquery-3.5.1.js
- https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js
- https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js
- https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js
- https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js
- https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js
- https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js
- https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js
- https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js
- 
- 
-	 </script>
+<link rel="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+   
+  
    <script type="text/javascript">   
    
         function deleteSalereport(val)
@@ -48,15 +38,9 @@
         	$("#myModalDelete").modal();
         }
         
-        $(document).ready(function() {
-            $('#example').DataTable( {
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ]
-            } );
-        } );
+        
 </script>
+
   
 </head>
 <body class="hold-transition sidebar-mini">
@@ -426,16 +410,16 @@
             <div class="card card-info">
               <div class="card-header">
                 <h3 class="card-title">Sale Report</h3>
-                 <div class="card-tools">
-                   <button type="button" id="addNewButton" class="btn btn-info">Add New</button>
-                            <button type="button" id="showTableButton" class="btn btn-info">Show Table</button>
+                  <div class="card-tools">
+                   <!-- <button type="button" id="addNewButton" class="btn btn-info">Add New</button>
+                            <button type="button" id="showTableButton" class="btn btn-info">Show Table</button> -->
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
                 <i class="fas fa-minus"></i>
               </button>
               <button type="button" class="btn btn-tool" data-card-widget="remove">
                 <i class="fas fa-times"></i>
               </button>
-            </div>
+            </div> 
               </div>
               <!-- /.card-header -->
 
@@ -535,7 +519,7 @@
                 </div>
                 </div>
                
-             
+              
     
                 <div class="card-body">
                 
@@ -544,10 +528,9 @@
                                             if(id1!=null){
                                             %>
                                             
-                                           < 
+                                           
    <!-- for update  -->
-                          <div class="row" id="addNewForm1">
-                 <form role="form" action="saleUpdate" method="post">
+                        
                  
                  <%
                  try{
@@ -699,8 +682,7 @@
                                 <th>Rate</th>
                                 <th>Unit</th>
                                 <th>Discount</th>
-                                <th>Edit</th>
-                                <th>Delete</th>        
+                                     
                   </tr>
                   </thead>
                  <tbody>
@@ -728,15 +710,21 @@
                                             <td id="discount_<%rs.getString("id");%>"><%=rs.getString("discount") %></td>
                                              <td>
 								
-								   <a href="salereport?id=<%=rs.getString("id")%>" class="btn btn-success">Update</a>  
+								       <a href="sale?id=<%=rs.getString("id")%>" class="btn btn-success">Update</a>  
                             			
 					
 							</td>
                                             <td>
                                              
-                            					<a  onclick="deleteSalereport(<%=rs.getString("id")%>)"  class="text-white btn btn-success"> Delete</a>
+                            					<a  onclick="deletesale(<%=rs.getString("id")%>)"  class="text-white btn btn-success"> Delete</a>
 											
                                             </td>
+                                           
+                                            
+                            			
+					
+							</td>
+                                            
                                            
                                             
                                         </tr>
@@ -767,8 +755,7 @@
                                 <th>Rate</th>
                                 <th>Unit</th>
                                 <th>Discount</th>
-                                <th>Edit</th>
-                                <th>Delete</th>        
+                                    
                     </tr>
                   </tfoot>
                 </table>
@@ -804,10 +791,10 @@
 
 
 
-  		 <!-- Delete Modal -->
+  		 Delete Modal
 		  <div class="modal fade" id="myModalDelete" role="dialog">
 		    <div class="modal-dialog">
-		      <!-- Modal content-->
+		      Modal content
 		      <div class="modal-content">
 		        <div class="modal-header">
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -834,7 +821,7 @@
 		      
 		    </div>
 		  </div>
-
+ 
 
 
 <!-- jQuery -->
@@ -854,11 +841,42 @@
 
 
 
+ <script type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	    $('#example1').DataTable( {
+	        dom: 'Bfrtip',
+	        buttons: [
+	            'copy', 'csv', 'excel', 'pdf', 'print'
+	        ]
+	    } );
+	} );
+</script>
+/* 	
+$('#example1').dataTable( {
+    paging: false,
+    searching: false
+} );
+	 */
+
+
   
 
 <script>
   $(function () {
-    $("#example1").DataTable({
+  /*   $("#example1").DataTable({ */
       "responsive": true,
       "autoWidth": false,
     });
@@ -871,9 +889,9 @@
       "autoWidth": false,
       "responsive": true,
     });
-  });
+  });  
 
-   $(document).ready(function(){
+  $(document).ready(function(){
                                                                         $("#addNewButton").show();
                                                                         $("#showTable").show();
                                                                         $("#addNewForm").hide();
@@ -895,7 +913,7 @@
                                                                     });
    
    
-   
+
    
 
 </script>

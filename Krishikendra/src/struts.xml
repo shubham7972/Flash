@@ -5,12 +5,45 @@ Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>  
 <package name="default" extends="struts-default" namespace="/">  
 
-<!--   @@@@@@@@@@  sale page    @@@@@@@@@@  -->
+
 
 <action name="index">  
 <result name="success">WEB-INF/index.jsp</result>
 </action>
 
+
+
+<action name="companymaster">  
+<result name="success">WEB-INF/companymaster.jsp</result>
+</action>
+
+<action name="companymaster">  
+<result name="success">WEB-INF/companymaster.jsp</result>
+</action>
+
+<action name="cmasterInsert" class="companymaster.InsertCompanymaster"> 
+<result name="input">WEB-INF/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/companymaster.jsp</result>
+</action> 
+
+<action name="cmasterUpdate" class="companymaster.UpdateCompanymaster"> 
+<result name="input">WEB-INF/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/companymaster.jsp</result>
+</action>
+
+<action name="cmasterDelete" class="companymaster.DeleteCompanymaster"> 
+<result name="input">WEB-INF/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/companymaster.jsp</result>
+</action>
+
+
+
+<!--   @@@@@@@@@@  sale page    @@@@@@@@@@  -->
+
+<!--   @@@@@@@@@@  sale page    @@@@@@@@@@  -->
 
 
 

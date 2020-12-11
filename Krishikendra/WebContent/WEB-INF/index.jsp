@@ -226,7 +226,7 @@
             </a>
             <ul class="nav nav-treeview">
              <li class="nav-item">
-                <a href="expense" class="nav-link">
+                <a href="companymaster" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Company Master</p>
                 </a>
